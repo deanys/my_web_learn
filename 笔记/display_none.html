@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style type="text/css">
+        .box {
+            background-color: green;
+            display: block;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            margin: 0 auto;
+        }
+        
+        .box:hover .text {
+            display: none;
+        }
+        
+        .box:hover .text1 {
+            display: block;
+        }
+    </style> -->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #content {
+            background: #0CF;
+            height: 200px;
+            width: 200px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        
+        #show {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            background: #F09;
+            top: 0px;
+            position: absolute;
+            opacity: 0;
+            display: block;
+            font-size: 12px;
+            transition: 0.3s;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+        }
+        
+        #content:hover #show {
+            color: #656e73;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <div class="box">
+        <p class="text">home</p>
+        <p class="text1" style="display: none;">首页</p>
+    </div> -->
+    <div id="content">
+        这是原本的div层
+        <div id="show">
+            <p>这是鼠标移动上去后的div层</p>
+        </div>
+    </div>
+</body>
+
+</html>

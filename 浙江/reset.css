@@ -1,0 +1,171 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrap {
+    width: 1332px;
+    height: 1225px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.head {
+    width: 1350px;
+    height: 84px;
+    background-color: #eeeeee;
+}
+
+.head img {
+    float: left;
+    margin-left: 83px;
+    padding-top: 12px;
+}
+
+.menu {
+    float: left;
+    margin-left: 98px;
+    width: 620px;
+    height: 84px;
+}
+
+.menu ul li a {
+    float: left;
+    width: 65px;
+    height: 84px;
+    font-size: 16px;
+    line-height: 84px;
+    margin-right: 40px;
+    /* text-align: center; */
+}
+
+.login_search {
+    margin-right: 100px;
+    height: 84px;
+    width: 203px;
+    float: right;
+}
+
+.login_search a {
+    margin-top: 10px;
+    /* margin-left: 24px; */
+    /* margin-right: 10px; */
+    padding-right: 10px;
+    border-right: 1px solid #8dacd9;
+    float: left;
+    font-size: 13px;
+}
+
+.login_search ul {
+    width: 203px;
+    height: 30px;
+    margin-left: 24px;
+    float: left;
+}
+
+.login_search form {
+    position: relative;
+    padding-top: 11px;
+    float: left;
+    width: 194px;
+    height: 54px;
+}
+
+#btn {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-image: url(image/search.jpg);
+    background-repeat: no-repeat;
+    /* background-color: green; */
+    border: none;
+    right: 1px;
+    bottom: 28px;
+    z-index: 1;
+}
+
+.banner {
+    float: left;
+    width: 1350px;
+    height: 372px;
+    overflow: hidden;
+}
+
+.summary {
+    margin-left: 82px;
+    margin-top: 48px;
+    float: left;
+    width: 1268px;
+    height: 384px;
+    background-color: #fff;
+}
+
+.sum {
+    float: left;
+    margin-right: 70px;
+}
+
+.footer {
+    width: 1332px;
+    height: 258px;
+    background-color: #eeeeee;
+}
+
+.sum {}
+
+.footer_left {
+    width: 931px;
+    height: 258px;
+    float: left;
+}
+
+.footer_left ul {
+    padding-top: 20px;
+    padding-left: 85px;
+    float: left;
+}
+
+.footer_left h3 {
+    font-weight: normal;
+    font-size: 20px;
+    color: red;
+}
+
+.footer_left ul li a {
+    line-height: 25px;
+    font-size: 15px;
+    color: #666666;
+}
+
+.footer_right {
+    float: left;
+    width: 380px;
+    height: 201px;
+    border-left: 1px solid #cccccc;
+    padding-top: 19px;
+    padding-left: 20px;
+}
+
+.image_test {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    /* background-color: yellow; */
+    /* overflow: hidden; */
+}
+
+.weixin {
+    position: absolute;
+    width: 300px;
+    font-size: 13px;
+    /* background-color: violet; */
+    bottom: 0px;
+}

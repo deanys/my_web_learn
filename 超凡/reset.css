@@ -1,0 +1,145 @@
+.page {
+    width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: #fff;
+}
+
+.header {
+    width: 1440px;
+    height: 82px;
+}
+
+.head_left {
+    float: left;
+}
+
+.head_left ul {
+    margin-left: 148px;
+    margin-top: 13px;
+}
+
+.head_left li {
+    float: left;
+    /* width: 218px; */
+    height: 82px;
+    margin-right: 17px;
+}
+
+.jianbian {
+    float: left;
+    width: 225px;
+    margin-top: 12px;
+    height: 40px;
+    background: linear-gradient(to right, #c3216d 20%, #1891d6 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.jianbian>p {
+    float: left;
+    border-left: 1px solid #dcdcdc;
+    height: 40px;
+    width: 54px;
+}
+
+.head_left_left {
+    float: left;
+    width: 160px;
+    border: none;
+}
+
+.head_left_left p {
+    float: left;
+    border: none;
+}
+
+.head_right {
+    float: right;
+    margin-right: 154px;
+}
+
+.head_right li {
+    float: left;
+    height: 82px;
+    line-height: 82px;
+    margin-left: 60px;
+}
+
+.business {
+    height: 756px;
+    width: 1440px;
+    float: left;
+}
+
+.business h3 {
+    width: 244px;
+    height: 50px;
+    margin: 40px auto;
+    font-size: 44px;
+    background: linear-gradient(to right, #c3216d, #1891d6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.business p {
+    width: 628px;
+    /* height: 50px; */
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.business ul {
+    width: 1187px;
+    margin: 0 auto;
+}
+
+.business li {
+    float: left;
+    margin-right: 45px;
+    margin-bottom: 18px;
+}
+
+.client {
+    height: 762px;
+    width: 1440px;
+    background-color: #ebeff2;
+    float: left;
+}
+
+.client h3 {
+    width: 244px;
+    height: 50px;
+    margin: 40px auto;
+    font-size: 44px;
+    background: linear-gradient(to right, #c3216d, #1891d6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.client p {
+    width: 628px;
+    /* height: 50px; */
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.client ul {
+    width: 1187px;
+    margin: 0 auto;
+    /* background-image: linear-gradient(to right, red, green);
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
+    /* color: transparent; */
+}
+
+.client li {
+    float: left;
+    border: 1px solid #eaeff3;
+}
+
+.works{
+    
+}

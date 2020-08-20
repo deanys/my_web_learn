@@ -1,0 +1,203 @@
+.wrap {
+    width: 100%;
+    height: 100%;
+    /* background-color: greenyellow; */
+}
+
+.head {
+    width: 1170px;
+    margin: 0 auto;
+    /* height: 100px; */
+    background: #fff;
+}
+
+.head_con {
+    height: 100px;
+}
+
+.head img {
+    float: left;
+    margin-top: 22px;
+}
+
+.menu ul li {
+    margin-left: 38px;
+    margin-top: 40px;
+    float: left;
+}
+
+.menu a {
+    font-size: 16px;
+}
+
+.system_choice {
+    float: right;
+}
+
+.system_choice li {
+    float: left;
+    margin-top: 40px;
+    margin-right: 0px;
+}
+
+#android {
+    text-align: right;
+    display: block;
+    font-size: 13px;
+    padding-right: 19px;
+    border-right: 1px solid black;
+    width: 80px;
+    background: url(image/andriod.jpg) no-repeat left center;
+}
+
+#iphone {
+    margin-left: 19px;
+    text-align: right;
+    display: block;
+    font-size: 13px;
+    padding-right: 0px;
+    width: 80px;
+    background: url(image/iphone.jpg) no-repeat left center;
+}
+
+.sign_up {
+    height: 38px;
+    background: #fdf8e4;
+    border-top: solid 1px #ffe7b9;
+    border-bottom: solid 1px #ffe7b9;
+    margin: 15px 0;
+}
+
+.sign_up p {
+    line-height: 38px;
+    color: #b25b30;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.mid {
+    width: 1170px;
+    margin: 0 auto;
+    /* height: 100px; */
+    background: #fff;
+}
+
+.mid_left {
+    width: 280px;
+    margin-right: 14px;
+    float: left;
+}
+
+.mid_left img {
+    float: left;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.mid_left li {
+    float: left;
+}
+
+.mid_left a {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    width: 129px;
+    font-size: 14px;
+    border-right: 1px solid #e3e3e3;
+}
+
+.mid_left p {
+    text-align: center;
+}
+
+.ask_qu {
+    float: left;
+    background-color: #fafafa;
+    width: 230px;
+    height: 74px;
+    margin-left: 19px;
+    padding-left: 10px;
+    padding-top: 18px;
+}
+
+.ask_qu h3 {
+    font-size: 18px;
+    color: #52c9c5;
+}
+
+.ask_qu p {
+    text-align: left;
+}
+
+.ask_qu li {
+    padding-right: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    float: left;
+    border-right: 1px solid #000;
+}
+
+.talk {
+    float: left;
+    width: 264px;
+    height: 320px;
+}
+
+.about_talk {
+    float: left;
+    margin-left: 10px;
+    width: 266px;
+    height: 184px;
+}
+
+.about_talk textarea {
+    float: left;
+    resize: none;
+    width: 246px;
+    height: 86px;
+}
+
+.about_talk input {
+    margin-top: 20px;
+    float: left;
+    background-color: #fb7200;
+    width: 246px;
+    height: 38px;
+}
+
+.mid_right {
+    width: 870px;
+    float: left;
+    min-height: 1000px;
+    background-color: chartreuse;
+}
+
+.mid_right form {
+    position: relative;
+}
+
+#search {
+    height: 58px;
+    width: 887px;
+    /* border: 1px solid red; */
+    border: none;
+    outline: none;
+    font-style: italic;
+    font-size: 19px;
+    color: #d7d7d7;
+    /* font-weight: bold; */
+}
+
+#btn {
+    border: none;
+    position: absolute;
+    width: 104px;
+    height: 44px;
+    right: 7px;
+    bottom: 10px;
+    background-color: #5ecfc9;
+    color: #fff;
+    font-size: 25px;
+}

@@ -1,0 +1,58 @@
+{
+  "id": "2002349",
+  "name": "wab",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "538489",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "729340",
+      "name": "个人信息",
+      "font_class": "gerenxinxi",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "798101",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "3216165",
+      "name": "账单",
+      "font_class": "icon--",
+      "unicode": "e754",
+      "unicode_decimal": 59220
+    },
+    {
+      "icon_id": "8361825",
+      "name": "扫一扫",
+      "font_class": "saoyisao",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    },
+    {
+      "icon_id": "15112778",
+      "name": "付款码",
+      "font_class": "fukuanma",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "15432397",
+      "name": "彩虹",
+      "font_class": "caihong",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    }
+  ]
+}

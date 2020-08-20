@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.banner {
+    width: 1600px;
+    height: 700px;
+    background: chartreuse;
+    margin: 0 auto;
+}
+
+.head {
+    width: 1205px;
+    height: 100px;
+    background: green;
+    margin: 0 auto;
+}

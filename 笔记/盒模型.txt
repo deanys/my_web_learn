@@ -1,0 +1,30 @@
+padding
+border
+margin
+content
+
+
+overflow:hidden/auto/scroll
+white-space:nowrap
+
+
+
+/*
+			 width
+			 overflow: hidden; 容器溢出隐藏  auto scroll
+			 white-space: nowrap:强制文字大一行
+			 text-overflow: ellipsis;文字溢出出现的省略号
+			 
+			 * */
+余美丽(0021CCBB9DD2对话) 10:50:16
+<!--
+			元素类型                                 特点
+			1，块元素（block）        1)会上下显示   2)可以识别宽度和高度  div p h1-h6 ul li ol li dl dt dd table form
+			2，内联元素(inline) 1)不会上下显示（并列显示） 2）不可以识别宽度和高度    a span i em b strong u sub sup
+			3，内联块元素(inline-block) 1)不会上下显示（并列显示） 2)可以识别宽度和高度  input img
+			
+			元素类型可以通用display进行转换
+			display:block /inline /inline-block /none(不显示)
+			当给内联元素加上浮动就相当于给转了元素类型为内联块元素
+			
+		-->

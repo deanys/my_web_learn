@@ -1,0 +1,72 @@
+.wrap {
+    width: 1350px;
+    height: 3976px;
+    background-color: green;
+    margin: 0 auto;
+}
+
+.head {
+    width: 1350px;
+    height: 49px;
+    background-color: #fff;
+}
+
+.head_left img {
+    margin-left: 75px;
+    margin-top: 10px;
+    float: left;
+}
+
+.head_left p {
+    margin-top: 8px;
+    line-height: 16px;
+    font-size: 12px;
+    float: left;
+    margin-left: 16px;
+    color: #027c9b;
+}
+
+.menu ul {
+    float: left;
+    margin-left: 150px;
+}
+
+.menu li {
+    float: left;
+    margin-left: 40px;
+    line-height: 49px;
+}
+
+.menu a {
+    color: #333333;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.login ul {
+    float: right;
+    margin-right: 74px;
+}
+
+.login li {
+    float: left;
+    margin-top: 12px;
+}
+
+.login a {
+    color: #00708c;
+    display: block;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    width: 74px;
+    height: 28px;
+    border: 1px solid #e5e2eb;
+}
+
+.banner {
+    width: 1350px;
+    height: 640px;
+    float: left;
+    position: relative;
+}

@@ -1,0 +1,246 @@
+.wrap {
+    margin: 0 auto;
+    overflow: hidden;
+    height: 1500px;
+    width: 1000px;
+    background-color: yellowgreen;
+    border: 1px solid black;
+}
+
+.head {
+    width: 1000px;
+    height: 100px;
+    background-color: #ffffff;
+}
+
+.logo {
+    margin-top: 40px;
+    margin-left: 21px;
+    float: left;
+}
+
+.search {
+    width: 226px;
+    height: 28px;
+    background-color: #f1f1f1;
+    margin-right: 20px;
+    margin-top: 39px;
+    float: right;
+    border: 2px solid #e6e6e6;
+}
+
+#input_search {
+    border: none;
+    color: #989898;
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: 9px;
+    background-color: #f1f1f1;
+    float: left;
+}
+
+#input_submit {
+    width: 25px;
+    height: 26px;
+    margin-right: 0px;
+    border: none;
+    background-image: url(image/search_logon.jpg);
+    background-repeat: no-repeat;
+    /* background: black; */
+    background-position: left center;
+    float: right;
+}
+
+.menu {
+    width: 1000px;
+    height: 55px;
+    background-color: black;
+}
+
+.menu ul li a {
+    margin-left: 30px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    float: left;
+    width: 90px;
+    line-height: 55px;
+    border-right: 1px solid #474747;
+}
+
+.banner {
+    width: 1000px;
+    height: 464px;
+}
+
+.news {
+    width: 1000px;
+    height: 264px;
+    background-color: yellow;
+}
+
+.news h3 {
+    padding-top: 36px;
+}
+
+.news_info {
+    width: 478px;
+    height: 264px;
+    padding-left: 22px;
+    background-color: #ffffff;
+    float: left;
+}
+
+.news_info ul li a {
+    background: url(image/list_icon.jpg) no-repeat left center;
+    /* background-color: fuchsia; */
+}
+
+.news_info h3 {
+    margin-bottom: 20px;
+}
+
+.news_info a {
+    /* display: inline-block; */
+    float: left;
+    font-size: 13px;
+    line-height: 26px;
+    padding-left: 9px;
+    overflow: hidden;
+    width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news_info span {
+    float: right;
+    display: block;
+    font-size: 13px;
+    line-height: 26px;
+    margin-right: 30px;
+}
+
+.introduce {
+    padding-left: 22px;
+    width: 218px;
+    height: 264px;
+    background-color: #f1f1f1;
+    float: left;
+}
+
+.job_var {
+    padding-left: 22px;
+    width: 238px;
+    height: 264px;
+    background-color: #ffffff;
+    float: left;
+    background-image: url(image/flower.jpg);
+    background-repeat: no-repeat;
+    background-position: 155px 121px;
+}
+
+.mark {
+    float: left;
+    width: 982px;
+    height: 274px;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-left: 18px;
+}
+
+.mark dl {
+    float: left;
+    /* width: 200px; */
+    height: 250px;
+    /* background-color: green; */
+    margin-right: 40px;
+    margin-top: 18px;
+}
+
+.mark dd {
+    width: 167px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sub_nav {
+    float: left;
+    width: 1000px;
+    height: 249px;
+    background-color: #e5e5e5;
+    padding-top: 30px;
+}
+
+.sub_left {
+    width: 520px;
+    height: 249px;
+    /* background-color: yellow; */
+    float: left;
+}
+
+.sub_mid {
+    float: left;
+    width: 207px;
+    height: 249px;
+    /* background-color: yellowgreen; */
+}
+
+.sub_right {
+    float: left;
+    width: 273px;
+    height: 249px;
+    /* background-color: yellow; */
+}
+
+.sub_left_left {
+    padding-top: 15px;
+    margin-left: 19px;
+    margin-top: 12px;
+    float: left;
+    width: 453px;
+    height: 131px;
+    border-top: 1px solid #c2c2c2;
+    /* background-color: green; */
+}
+
+.sub_left h3 {
+    margin-left: 30px;
+}
+
+.sub_left_left a {
+    padding-left: 15px;
+    float: left;
+    width: 136px;
+    height: 24px;
+    font-size: 13px;
+    line-height: 23px;
+    color: #656565;
+    /* background-color: yellow; */
+    background-image: url(image/dayu.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.sub_mid_mid a {
+    padding-left: 15px;
+    float: left;
+    width: 136px;
+    height: 24px;
+    font-size: 13px;
+    line-height: 23px;
+    color: #656565;
+    background-image: url(image/dayu.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.sub_mid_mid {
+    padding-top: 15px;
+    margin-top: 12px;
+    float: left;
+    width: 150px;
+    height: 131px;
+    border-top: 1px solid #c2c2c2;
+    /* background-color: green; */
+}

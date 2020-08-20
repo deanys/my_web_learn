@@ -1,0 +1,200 @@
+body,
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+img,
+dl,
+input {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    color: #000;
+    font-size: 13px;
+}
+
+p {
+    text-align: center;
+}
+
+
+/* 说明：元素水平垂直居中 ul的用法 */
+
+.father_center {
+    float: left;
+    widows: 1000px;
+    height: 100px;
+    /* background-color: yellow; */
+}
+
+.father_center::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.father_center ul {
+    display: inline-block;
+    /* height: 50%; */
+    height: 60px;
+    vertical-align: middle;
+    /* width: 50%; */
+    /* background-color: black; */
+}
+
+.father_center li {
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    /* background-color: yellowgreen; */
+}
+
+.father_center li:last-child {
+    border-right: none;
+}
+
+.father_center a {
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    /* line-height: 60px;当有上下排列不使用 */
+    /* background-color: chartreuse; */
+}
+
+
+/* 当a里面有两个元素的时候，上下分布 */
+
+
+/* .father_center p {
+    float: left;
+    width: 100px;
+    height: 30px;
+    background-color: chartreuse;
+} */
+
+
+/* 当a里面有两个元素的时候，左右分布 */
+
+.father_center p {
+    float: left;
+    width: 50px;
+    height: 60px;
+    background-color: chartreuse;
+}
+
+
+/* 如果需要微调，用last-child */
+
+.footer_li {
+    float: left;
+    width: 1000px;
+    height: 100px;
+    /* background-color: chartreuse; */
+}
+
+.footer_li ol>li {
+    width: 200px;
+    height: 200px;
+    float: left;
+    /* background-color: chartreuse; */
+}
+
+
+/* 这是搜索框，如果有放大镜和照相机，用absoulte解决 */
+
+.search {
+    margin-left: 200px;
+    float: left;
+    width: 500px;
+    height: 80px;
+    /* background-color: chartreuse; */
+}
+
+#search {
+    width: 300px;
+    float: left;
+    height: 30px;
+    font-size: 13px;
+    color: #656565;
+    padding-left: 7px;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    border: 1px solid #d5d5d5;
+    background-color: fff;
+}
+
+#btn {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    height: 32px;
+    width: 100px;
+    float: left;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-radius: 0 15px 15px 0px;
+    background-color: #444444;
+}
+
+.search_input {
+    width: 450px;
+    height: 32px;
+    /* background-color: chartreuse; */
+    position: relative;
+}
+
+.search_input>a {
+    width: 30px;
+    height: 32px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* 这是热搜的用法 */
+
+.search_exam {
+    width: 500px;
+    height: 30px;
+    float: left;
+    /* background-color: chartreuse; */
+    font-size: 13px;
+}
+
+.search_exam p {
+    float: left;
+    line-height: 30px;
+    color: #cacaca;
+}
+
+.search_exam a {
+    color: #898989;
+}
+
+.search_exam ul li {
+    float: left;
+    margin-left: 10px;
+    line-height: 30px;
+}

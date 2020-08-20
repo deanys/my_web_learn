@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .position_fix {
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            background-color: black;
+        }
+        
+        .box {
+            width: 1000px;
+            height: 4000px;
+        }
+        
+        .box a {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .position_fix:hover {
+            overflow: hidden;
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="绝对定位.bmp" alt="" class="position_fix">
+        <a href="">这是结尾</a>
+    </div>
+</body>
+
+</html>

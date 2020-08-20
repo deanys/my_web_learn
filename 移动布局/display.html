@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球登录</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html {
+            font-size: 31.25vw;
+            /* font-size: 100px;100px==1rem 手机宽度为320px，为1vm==3.2px，100px=31.25vw */
+        }
+        
+        body {
+            font-size: 0.17rem;
+        }
+        
+        .header {
+            width: 3.2rem;
+            height: 5.45rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            /* align-items: flex-start; */
+            /* align-items: flex-start; */
+            background-color: chartreuse;
+        }
+        
+        .header>p {
+            width: 3.2rem;
+            height: 0.45rem;
+            background-color: black;
+            text-align: center;
+            line-height: 0.45rem;
+        }
+        
+        .header form {
+            width: 3.2rem;
+            height: 2rem;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .header input {
+            width: 2.9rem;
+            height: 0.32rem;
+            /* padding-top: 0.2rem; */
+            outline: line;
+            border: none;
+            background-color: chartreuse;
+            border-bottom: 1px solid #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <p>足球圈—登录</p>
+        <form action="POST">
+            <input type="text">
+            <input type="password">
+            <p>没有账号，点击此处立即<a href="">注册</a></p>
+            <input type="submit" value="提交">
+        </form>
+
+    </div>
+</body>
+
+</html>
