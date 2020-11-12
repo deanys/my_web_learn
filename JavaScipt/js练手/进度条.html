@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>07进度条 </title>	
+	</head>
+	<style>
+		#progress{
+			position: relative;
+			margin: auto;
+			top: 200px;
+			display: block;
+			width: 200px;
+			height: 20px;
+			border-style: dotted;
+			border-width: thin;
+			border-color: darkgreen;
+		}
+		#filldiv{
+			position:absolute;
+			top: 0px;
+			left: 0px;
+			width: 0px;
+			height: 20px;
+			background: blue;
+		}
+		#percent{
+			position: absolute;
+			top: 0px;
+			left: 200px;
+			
+		}
+	</style>
+	<script type="text/javascript" src="./public.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			//需求分析:随着时间的变化,filldiv越来越宽,直到和progress一样宽,在宽度变化的同时,颜色随机变化,进度百分比也随着变化
+			//技术线:定时器setInterval,style.width赋值, clientWidth获取progress宽
+
+			//获取相关元素
+			var total = $id('progress').clientWidth;//总宽度
+			var fillDiv = $id('filldiv');//进度条
+			var sp = $id('percent');//百分比显示的容器
+			var width = 0;//记录进度条的宽度
+			//随着时间的变化
+			var timer = setInterval(function(){
+				width++;
+				if(width>=total){					
+					fillDiv.style.width = total+"px";
+					fillDiv.style.backgroundColor = getColor();
+					sp.innerHTML = "100%";
+					clearInterval(timer);
+
+				}
+				fillDiv.style.width = width+"px";
+				fillDiv.style.backgroundColor = getColor();
+				sp.innerHTML = Math.ceil(width/total*100)+"%";
+
+			},1000/60)
+
+		}
+	</script>
+	<body>
+		<div id="progress">
+			<div id="filldiv"></div>
+			<span id="percent">0</span>
+		</div>
+	</body>
+</html>
+ 

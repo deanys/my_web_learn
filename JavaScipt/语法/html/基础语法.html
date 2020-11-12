@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础语法</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //数据类型：
+    var num = 1,
+        str = "abcd",
+        flo = 1.222,
+        boo = true,
+        c = null,
+        Na = NaN,
+        un = undefined;
+    console.log(typeof num, typeof Na);
+    console.log(isNaN(Na))
+    if (Na != Na) {
+        console.log("可以用来判断是不是NaN,不等于本身");
+    }
+    //数据类型转换:
+    str1 = "1";
+    str2 = "1nac";
+    str3 = "ac23v";
+    str4 = "1.34";
+    console.log(Number(str1), Number(str2), Number(str3), Number(str4));
+    console.log(parseInt(str1), parseInt(str2), parseInt(str3), parseInt(str4));
+    // parseInt和parseFloat:开头就不是数字，那么直接返回 NaN
+    // Number：可以转换小数，会保留小数 可以转换布尔值  遇到不可转换的都会返回 NaN
+    /*除了加法以外的数学运算
+     运算符两边都是可运算数字才行
+     如果运算符任何一遍不是一个可运算数字， 那么就会返回 NaN
+     加法不可以用*/
+    console.log("1" + "1");
+    console.log("1" - "2");
+    console.log("1" * 12);
+
+    console.log(String(35));
+    // toString具体用法需要再了解
+    var num = 13;
+    console.log(num.toString()); //转化为13
+    console.log(num.toString(2)); //1101二进制
+    console.log(Boolean(0), Boolean(false), Boolean(NaN), Boolean(null), Boolean(""), Boolean(undefined));
+    // 上面全都是false
+    console.log(Boolean("0")); //true
+
+    // 关于== 和===
+    console.log(Boolean(2 == "2"), Boolean(2 === "2"));
+    var i = 0,
+        i_c = 6;
+    i_c = i++;
+    console.log(i, i_c);
+    // i++先把i赋值给i_c ,然后i再加1
+    // 三元运算符
+    var age = 18;
+    age >= 18 ? console.log("已经成年") : console.log("未成年")；
+        // while do...while for break contine 不写，都会一直用
+        // 函数定义以及其他的用法
+
+    /*对象*/
+    // 对象是复合值，从原型的对象继承属性，不能存在两个同名的属性
+    // 属性的特性：1.writable 2.enumerable 3configurable
+    // 1：对象的创建
+
+</script>
+
+</html>

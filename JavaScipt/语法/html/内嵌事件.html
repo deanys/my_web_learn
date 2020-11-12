@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <p>如果鼠标移入触发背景变色，移入到内嵌的时候是否会发生</p>
+    <div class="box">
+        <div class="box2"></div>
+    </div>
+</body>
+<script>
+    // 事件冒泡：事件向上传递，逐级触发
+    // 理想状态如下：移动到box(包括box2)上，box2颜色变为红色，移出，box2变为白色
+    var box = document.querySelector(".box");
+    var box2 = document.querySelector(".box2");
+    console.log(box);
+    box.onmouseenter = function() {
+        console.log("box移入了")
+        box2.style.backgroundColor = "red";
+    }
+    box.onmouseleave = function() {
+        console.log("box移出了")
+        box2.style.backgroundColor = "white";
+    };
+    //此时结果如下：移入box元素上，box2颜色变为红色，移开box2变为白色
+    //问题一：如果先移入box2上，颜色变为红色，再移到box上，颜色变为白色，
+    // 问题二：先移入到box上，颜色变为红色，再移动box2上，颜色变成白色
+    box.addEventListener("mouseenter", function() {
+        console.log("box移入了")
+        box2.style.backgroundColor = "red";
+    }, true)
+    box.addEventListener("mouseleave", function() {
+        console.log("box移出了")
+        box2.style.backgroundColor = "white";
+    }, true); //true,代表捕获
+    // 问题如下：问题一依旧
+    //          问题二：先到box上，颜色变红，仔到box2上，颜色依旧是红色，再到box上，变为白色
+
+    //尴尬，用错
+</script>
+
+</html>

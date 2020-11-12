@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-3.5.1.js"></script>
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 200px;
+            /* background-color: black; */
+            padding: 300px;
+            /* border: 50px; */
+            border: 50px solid chartreuse;
+            margin: 34px;
+            /* border-color: chartreuse; */
+        }
+    </style>
+    <script>
+        $(function() {
+            // console.log("jquery 中 Width()是 " + $(".box").width())
+            console.log("jquery 中 height()是 " + $(".box").height()); //200
+            console.log("jquery 中 innerheight()是 " + $(".box").innerHeight()); //800
+            console.log("jquery 中 outerheight()是 " + $(".box").outerHeight()); //900
+            console.log("jquery 中 outerheight(true)是 " + $(".box").outerHeight(true)); //968
+            // 特效,hover特效并不完美？
+            // $(".box").hover(function() {
+            //     $(".box").stop().hide();
+            // }, function() {
+            //     $(".box").stop().show();
+            // })
+            $(".box").animate({
+                    width: "10px",
+                    left: "250px"
+
+                })
+                // $(".box").remove();
+        })
+    </script>
+</head>
+
+<body>
+    <p class="box">这是内容</p>
+</body>
+
+</html>

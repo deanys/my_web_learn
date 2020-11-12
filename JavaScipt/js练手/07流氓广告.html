@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background:red;
+            position: fixed;
+            bottom:0px;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>x</button>
+
+    </div>
+    <script>
+        /* 
+            需求分析: 页面上的流氓广告功能
+                1 页面打开在左下角有一个广告框
+                2 点击关闭的时候可以关闭
+                3 关闭一定时间以后自动还弹出来
+        */
+
+        //获取相关元素
+        var btn = document.querySelector('button');//关闭按钮
+        var div = btn.parentNode;//广告
+
+        //点击关闭的时候可以关闭
+        btn.onclick = function(){
+            div.style.display = "none";
+        }
+
+        //每隔一段时间自动还弹出来
+        setInterval(function(){
+            div.style.display = "block";
+        },3000)
+    </script>
+</body>
+</html>
