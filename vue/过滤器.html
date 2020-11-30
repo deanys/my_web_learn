@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <span>这是啥</span>
+        <br>
+        <span>{{msg| zah}}</span>
+        <span>{{msg | myname}}</span>
+        <input type="text" v-model="msg">
+        <span v-bind:suibian="msg | myname"></span>
+    </div>
+</body>
+<script>
+    Vue.filter("myname", function(val) {
+        return val.toUpperCase();
+    })
+    var app = new Vue({
+        el: ".box",
+        data: {
+            msg: "这是啥玩意"
+        },
+        watch: {
+            msg: function(val) {
+                console.log(val);
+            }
+        },
+        filters: {
+            zah: function(val) {
+                return "ggg" + val;
+            }
+        }
+    })
+</script>
+
+</html>

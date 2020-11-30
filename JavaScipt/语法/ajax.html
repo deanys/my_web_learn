@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    if (window.XMLHttpRequest) { // 非IE5 IE6
+        var xhr = new XMLHttpRequest();
+    } else { // IE5 IE6
+        var xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    };
+
+    xhr.open(method, url, async); //true为异步
+    // param： 对于post请求， 参数为发送到服务器的数据，get为null
+    xhr.send('name=xiaoming&age=24');
+
+    //     readyState 属性存有XMLHttpRequest对象的状态
+    // readyState 会从 0 到 4 发生变化：
+    // 0: 请求未初始化   1: 服务器连接已建立   2: 请求已接收   
+    // 3: 请求处理中      4: 请求已完成
+    // 当 readyState 改变时就会触发 onreadystatechange 事件
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) { // 请求完成
+            if (xhr.status == 200) { //ok 成功
+                alert(xhr.responseText); // 得到响应结果
+            } else {
+                alert(xhr.status); // 弹出失败的状态码
+            };
+        };
+    }
+</script>
+
+</html>

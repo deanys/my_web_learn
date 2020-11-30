@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <ol>
+            <!-- 创建一个 todo-item 组件的实例 -->
+            <todo-item></todo-item>
+        </ol>
+    </div>
+    <div id="app-7">
+        <ol>
+            <!--
+            现在我们为每个 todo-item 提供 todo 对象
+            todo 对象是变量，即其内容可以是动态的。
+            我们也需要为每个组件提供一个“key”，稍后再
+            作详细解释。
+          -->
+            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+        </ol>
+        <button-count></button-count>
+        <button-count></button-count>
+    </div>
+</body>
+<script>
+    // 定义名为 todo-item 的新组件
+    // 一个组件本质上是一个拥有预定义选项的一个 Vue 实例
+    // Vue.component('todo-item', {
+    //     template: '<li>这是个待办项</li>'
+    // })
+    // var app = new Vue(...)
+    // Vue.component('todo-item', {
+    //         template: '<li>这是个待办项</li>'
+    //     })
+    // 但是这样会为每个待办项渲染同样的文本，这看起来并不炫酷。
+    // 我们应该能从父作用域将数据传到子组件才对。
+    // 让我们来修改一下组件的定义，使之能够接受一个 prop：
+    // 优化后方案如下，
+
+    Vue.component('todo-item', {
+        // todo-item 组件现在接受一个
+        // "prop"，类似于一个自定义 attribute。
+        // 这个 prop 名为 todo。
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>' //组件模板内容
+    })
+
+    Vue.component('button-count', {
+        // count: 0,//为什么获取不到？,一定要用data，要不会出错。。。。
+        // data: {
+        //     count: 0
+        // }, //错误，也就是一定要求函数
+        // 我本来想把button-count放在div外面，但是不行，所以他是和new Vue一起用的
+        // 数据相互独立
+        data: function() {
+            return {
+                count: 0
+            }
+        },
+        template: '<button v-on:click="add">点击{{count}}</button>',
+        //组件模板必须是单个根元素<button v-on:click="add">点击{{count}}</button><button></button>,这样是不允许的
+        // 解决办法：通过div包住他们
+        // 支持模板字符串 ``
+        // 组件的命名方式 1.驼峰（尽量不用吧，只能在模板字符串使用） 2 - 
+        methods: {
+            add: function() {
+                this.count++;
+            }
+        }
+    })
+    var app7 = new Vue({
+        el: '#app-7',
+        data: {
+            groceryList: [{
+                id: 0,
+                text: '蔬菜'
+            }, {
+                id: 1,
+                text: '奶酪'
+            }, {
+                id: 2,
+                text: '随便其它什么人吃的东西'
+            }]
+        }
+    })
+</script>
+
+</html>

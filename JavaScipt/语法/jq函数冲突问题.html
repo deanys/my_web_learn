@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.5.1.js"></script>
+
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+<script>
+    jq推荐用on方法, off是解除
+    $(".box").on("click", function() {});
+    // 阻止冒泡
+    // e.stopPropagation() 阻止冒泡
+    // e.preventDefault() 阻止事件默认操作
+    // $(".box")[0] <==>$(".box").get(0) 转成dom对象
+
+    //    情况：引入多个js库发生冲突，比如都定义了$
+    // jQuery中的noConflict( )方法的作用就是让jQuery放弃对$符的所有权
+    $.noConflict();
+    // $(‘#div’).click(....); //无效
+    // jQuery(‘#div’).click(....); //有效
+
+    //  或者jQuery中允许我们自定义jQuery的别名
+    var jq = $.noConflict();
+    // jq(‘#div’).click(....); //有效
+    // jQuery(‘#div’).click(....); //有效
+    // $(‘#div’).click(....); //无效 报错
+
+    // 或者给$传递给ready(),函数里面可以使用
+    $.noConflict()
+    jQuery(function($) {
+        $("div")
+    })
+
+
+    // extend
+    $.extend()
+    $.extend(obj1, obj2); //浅拷贝
+    $.extend(true, obj1, obj2); //深拷贝
+
+    $.extend({
+        fly: function() {
+            alert('I can fly');
+        }
+    })
+    $.fly();
+
+    $.fn.extend({
+        rclick: function(fn) {
+            $(this).bind('contextmenu', function(e) {
+                fn(e);
+            })
+        }
+    })
+    $('#box').rclick(function(e) {
+        alert('右键点击');
+    })
+</script>

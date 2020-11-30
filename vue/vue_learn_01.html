@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <!-- <script src="./vue.js"></script> -->
+</head>
+
+<body>
+    <!-- 1.0.插值 -->
+    <div class="box">
+        <span>Text:{{my}}</span>
+    </div>
+    <!-- 1.1.{{{}}}的使用 -->
+    <div class="box2">
+        <span>login: {{{log}}}</span>
+        <!-- 报错？ -->
+    </div>
+
+</body>
+<script>
+    // var box = new Vue({
+    //     e1: "#box",
+    //     data: {
+    //         my: "我按"
+    //     }
+    // })
+
+    // var app = new Vue({
+    //     el: '#box',
+    //     data: {
+    //         my: '我喜欢'
+    //     }
+    // })
+    //自己写的不成功？原来是小写的l ,是el ,不是e12
+    // 重新写
+    var a = "测试一下"
+    var a1 = new Vue({
+        el: ".box",
+        data: {
+            my: a
+        }
+    })
+    a = "看下效果";
+    console.log(a);
+    var a2 = new Vue({
+        el: ".box2",
+        data: {
+            log: "<a>点击一下</a>"
+        }
+    })
+</script>
+
+</html>

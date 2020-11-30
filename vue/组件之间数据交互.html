@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <my-dock mk="来自家乡的爱情"></my-dock>
+        <my-dock v-bind:mk="msg"></my-dock>
+    </div>
+    <div class="box1">
+        <p>{{msg}}</p>
+        <my-docc v-on:father-text="change"></my-docc>
+        <my-docc v-on:father-text="change($event)"></my-docc>
+    </div>
+</body>
+<script>
+    Vue.component("my-dock", {
+        data: function() {
+            return {
+                color: "红色",
+                shape: "方形",
+                hard: "适中"
+            }
+        },
+        props: ["mk"],
+        template: '<p>{{ color +"------" +mk}} </p>'
+    })
+    var app = new Vue({
+        el: ".box",
+        data: {
+            msg: "hahah"
+        }
+    });
+    // 上面是父向子
+    // props是单向数据传递，fa---->son
+    // 自定义事件向父组件传递消息
+    Vue.component("my-docc", {
+        data: function() {
+            return {
+                color: "红色",
+                shape: "方形",
+                hard: "适中"
+            }
+        },
+        // template: `<button @click='$emit("father-text")'>傻逼</button>`
+        // 下面是传值
+        template: `<button @click='$emit("father-text",shape)'>傻逼</button>`
+    })
+    var app1 = new Vue({
+        el: ".box1",
+        data: {
+            msg: "儿子准备像我传递什么东西啊"
+        },
+        methods: {
+            change: function(val) {
+                // this.msg = this.msg + "1";
+                this.msg = this.msg + val;
+                console.log("dddd");
+            }
+        }
+    });
+</script>
+
+</html>

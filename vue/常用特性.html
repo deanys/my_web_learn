@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" v-model="v_value">
+        <input type="radio" name="sex" id="men" value="0" v-model="sex_choice">
+        <label for="men">男</label>
+        <input type="radio" name="sex" id="women" value="1" v-model="sex_choice">
+        <label for="women">女</label>
+        <br>
+        <input type="checkbox" name="aihao" id="basktball" value="0" v-model="ai_choice">
+        <label for="basktball">篮球</label>
+        <input type="checkbox" name="aihao" id="foot" value="1" v-model="ai_choice">
+        <label for="foot">足球</label>
+        <input type="checkbox" name="aihao" id="ping" value="2" v-model="ai_choice">
+        <label for="ping">乒乓球</label>
+        <br>
+        <select name="" id="" v-model="opt">
+            <!-- multiple="true" 的时候，多选，此时opt为数组 -->
+            <option>请选择职业</option>
+            <option value="老师">老师</option>
+            <option value="空姐">空姐</option>
+            <option value="黑丝诱惑">黑丝诱惑</option>
+        </select>
+        <br>
+        <textarea v-model.lazy="v_value" id="" cols="30" rows="10"></textarea>
+        <br>
+        <button v-on:click="on_submit">提交数据</button>
+    </div>
+</body>
+
+</html>
+<script>
+    // 表单操作
+    var app = new Vue({
+        el: ".box",
+        data: {
+            v_value: "昵称",
+            sex_choice: 0,
+            ai_choice: [],
+            opt: ""
+        },
+        methods: {
+            on_submit: function() {
+                console.log(this.v_value);
+                console.log(this.sex_choice);
+                console.log(this.ai_choice); //因为ai_choice是多选框，所以用数组
+                console.log(this.opt);
+            }
+        }
+    })
+
+    //表单域修饰符lazy trim number
+    // v-model.number="age" 将输入转化为数值
+    // v-model.trim="" 去除空格
+    //  lazy 当失去焦点时候才发生变化,不会立即变化
+</script>

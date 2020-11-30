@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text">
+        <input type="text" v-huo>
+        <p v-color='{color:"red"}'>我喜欢</p>
+        <p v-deta="msg">我尼玛</p>
+        <p v-my='{color:"blue"}'>局部指令</p>
+    </div>
+</body>
+<script>
+    Vue.directive("huo", {
+        inserted: function(el) {
+            el.focus();
+        }
+    })
+    Vue.directive("color", {
+        inserted: function(el, binding) {
+            console.log(binding);
+            el.style.backgroundColor = binding.value.color;
+            // binding.value是{color:red}
+
+        }
+    })
+    Vue.directive("deta", {
+        inserted: function(el, binding) {
+            console.log(binding);
+        }
+    })
+    var app = new Vue({
+        el: ".box",
+        data: {
+            msg: "hello"
+        },
+        // 局部指令
+        directives: {
+            my: { //此处命名不能有下划线
+                bind: function(el, binding) {
+                    el.style.backgroundColor = binding.value.color;
+                }
+            }
+        }
+
+    })
+</script>
+
+</html>

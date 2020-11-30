@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <a v-bind:href="url">点击</a>
+        <!-- 写法报错 -->
+        <!-- 绑定事件不生效 -->
+        <a href="https://www.baidu.com">sss</a>
+        <a :href="url">事件3</a>
+    </div>
+    <input type="text" v-bind:value="msg" v-on:input="msg=$event.target.vaule">
+
+    <div v-bind:class="{active:isActive}"></div>
+    <div v-bind:class="{activeClass,errorClass}"></div>
+</body>
+<script>
+    var app = new Vue({
+        el: ".box",
+        data: {
+            url: "https://www.baidu.com"
+        },
+        methods: {
+
+        }
+    })
+
+    //v-model底层实现原理分析
+    // <input type="text" v-bind:value="msg" v-on:input="msg=$event.target.value" >
+
+    // 样式绑定
+    // <div v-bind:class="{active(类名):isActive(布尔值)}"></div> 对象形式
+    // <div v-bind:class="[{ctiveClass,errorClass]"></div> 数组形式
+    // style样式处理，同上
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span v-cloak>{{mes}}</span>
+    </div>
+    <div class="box1">
+        <span v-text="msg"></span>
+        <span v-html="msg1"></span>
+        <span v-pre>{{msg2}}</span>
+        <!-- v-pre  跳过编译过程 -->
+        <span v-once>{{msg3}}</span>
+    </div>
+    <div class="box2">
+        <span>{{msg}}</span>
+        <input type="text" name="" id="" v-model="msg">
+        <!-- <input type="text" name="" id="" value="{{msg}}">这样不行 -->
+    </div>
+</body>
+<script>
+    var app = new Vue({
+            el: ".box",
+            data: {
+                mes: "什么"
+            }
+        })
+        // 数据绑定
+    var app1 = new Vue({
+        el: ".box1",
+        data: {
+            msg: "一干扰",
+            msg1: "<h1>二干扰</h1>",
+            msg2: "第三个",
+            msg3: "只能改变一次"
+        }
+    })
+    console.log(app1);
+    // 数据响应,
+    // 数据绑定：将数据显示到页面上
+    // 在console中，改变app.msg的值，页面上的内容发生改变
+    app1.msg = "我不知道"
+
+    // 数据双向绑定 mvvm model(数据) view(视图模板) view-model(程序逻辑)
+    var app2 = new Vue({
+        el: ".box2",
+        data: {
+            msg: "我不知道"
+        }
+    })
+</script>
+
+</html>

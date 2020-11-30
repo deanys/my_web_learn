@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <ju-a></ju-a>
+        <ju-b></ju-b>
+    </div>
+</body>
+<script>
+    var ComponentA = {
+        data: function() {
+            return {
+                msg: "hello a"
+            }
+        },
+        template: '<p>{{msg}}</p>'
+    };
+    var Cb = {
+        data: function() {
+            return {
+                msg: "hello b"
+            }
+        },
+        template: '<p>{{msg}}</p>'
+    }
+    var app = new Vue({
+            el: ".box",
+            components: {
+                "ju-a": ComponentA,
+                "ju-b": Cb
+            }
+        })
+        //全局里面不能使用局部组件，也就是template里面
+        // vue调试工具，在官网下面 devtools
+</script>
+
+</html>

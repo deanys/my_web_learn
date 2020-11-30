@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1.let不允许重复声明
+    let a = 1;
+    // let a = 2; erroe has benn declarde
+    var b = 1;
+    var b = 3;
+    // 2.作用域不同,let在块级作用域有效
+    // 3.let不能声明和形参相同的变量
+    function fn(a) {
+        // let a;报错
+    }
+    // 4.let没有变量提升
+    // alert(c);
+    var c = 2;
+
+    // alert(d);
+    // let d = 2; //报错
+
+    // TDZ暂时性锁区
+    // 一旦用let或const声明一个变量，那么这个区块就变成块级作用域，
+    // 用let或const声明的变量就“绑定”这个区域，不再受外部的影响。 
+    // 在该变量声明之前不可以用
+    var v = 1;
+    if (true) {
+        console.log(v); //在这里报错，不能在初始化之前
+        // let v = 2;
+    }
+    console.log(v);
+
+
+    // const
+    // const与let类似，但是，const常量一旦声明，常量将不能重新赋值！
+    const TD = 18;
+    TD = 3; //报错
+    // const实际上保证的，并不是值不能改变，而是指向的那个内存地址不能改变。
+</script>
+
+</html>

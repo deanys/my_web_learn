@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Per(name, age) {
+        this.name = name;
+        this.age = age
+        this.say = function() {
+            console.log("我是" + this.name + "年龄" + this.age);
+            console.log(this);
+        }
+    }
+    Per.prototype.init = function() {
+        console.log("我是初始化函数 init")
+    }
+    Per.prototype.sex = "男";
+    // 实例化
+    p = new Per("dean", 18);
+    console.log(p)
+    console.log(p.__proto__)
+    console.log(p.__proto__ === Per.prototype)
+    s = new Per("sam", 17)
+    console.log(s.__proto__ === p.__proto__)
+    console.log(s)
+        // console.log()
+</script>
+
+</html>

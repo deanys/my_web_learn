@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" v-on:click.stop="add">
+        <p>{{num}}</p>
+        <div v-on:click="one">
+            <button v-on:click="add">点击</button>
+            <a href="https://www.baidu.com" v-on:click.prevent="add">百度</a>
+        </div>
+    </div>
+    <!-- <div class="box1" v-on:click.self="d_my"> -->
+    <div class="box1" v-on:click="d_my">
+        <!-- <button v-on:click="b_my">点击我</button> -->
+        <button v-on:click.stop="b_my">低级</button>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: ".box",
+        data: {
+            num: 0
+        },
+        methods: {
+            add: function(event) {
+                console.log("你点击了bottom");
+                console.log(this);
+                this.num++;
+                event.stopPropagation(); // 阻止冒泡,此时并没有出现你点击了div
+            },
+            one: function(event) {
+                console.log("你点击了div");
+                console.log(this);
+                event.stopPropagation() //阻止p上面的num变化,没卵用
+
+            }
+        }
+    });
+    // 问1.app绑定的vue,点击事件是box的子元素，如何发生的num变化事件
+
+
+    var app1 = new Vue({
+        el: ".box1",
+        data: {},
+        methods: {
+            d_my: function() {
+                console.log("div 触发")
+            },
+            b_my: function() {
+                console.log("button 触发")
+            }
+        }
+    });
+
+    // 当div上有self时,只有自己点击才会触发
+    //         stop阻止冒泡
+    //         prevent阻止默认行为
+
+    // 按键修饰符v-on:keyup.enter=""，按enter键发生
+    // v-on：keydown.delete=""按delete键发生
+    //自定义按键修饰符
+    // Vue.config.keyCodes.f1=112,自定义按键事件
+    // event.keyCode的值 也可以这样实现：v-on:keyup.65=""
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <span>{{msg}}</span>
+        <span>{{msg.split("").reverse().join("")}}</span>
+        <span>{{reservemsg}}</span>
+        <span>{{reservemsg}}</span>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+            el: ".box",
+            data: {
+                msg: "hello",
+                firstname: "dean"
+            },
+            computed: {
+                reservemsg: function() {
+                    console.log("jhhh") //上面有两次，但只出现一次jhhh
+                        // 第一次的时候已经把结果缓存起来了
+                    return this.msg.split("").reverse().join("")
+                }
+            },
+            watch: {
+                firstname: function(val) {
+                    console.log(val)
+
+                }
+            }
+        })
+        //计算属性依赖缓存，方法不依赖缓存
+
+    //侦听器，如果数据发生变化，就会触发侦听器所绑定的方法
+</script>
+
+</html>

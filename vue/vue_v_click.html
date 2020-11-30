@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <p>{{num}}</p>
+        <button v-on:click="num++"></button>
+        <input type="button" @click="num++" value="">
+        <!-- 第二种写法 -->
+        <button v-on:click="add">add</button>
+        <button v-on:click="add()">add()</button> event 是undefined,没有调用
+        <button v-on:click="ch('123',$event)">惦记我</button>
+        <!-- 用来做参数传递 add("hi",$event) -->
+        <!-- <button v-on:click="num">错误</button>出现错误，不是一个function -->
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: ".box",
+        data: {
+            num: 0
+        },
+        methods: {
+            add: function(event) {
+                console.log(this === app)
+                console.log(event)
+                this.num++; //this指向app
+            },
+            ch: function(a, event) {
+                console.log(a);
+                console.log(event);
+                console.log(event.target);
+                console.log(event.target.tagName);
+                console.log(event.target.innerHTML);
+            }
+        }
+    });
+    //事件修饰符$event
+</script>
+
+</html>

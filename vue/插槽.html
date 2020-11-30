@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <my-dock></my-dock>
+        <my-dock>我爱你</my-dock>
+        <!-- <div>
+            <p slot="one">卧槽你打野</p>
+            <p></p>
+            <p></p>
+            <p slot="two">卧槽你打野</p>
+            <p slot="three">卧槽你打野</p>
+        </div> -->
+        <my-docc>
+            <p slot="one">卧槽你打野</p>
+            <p></p>
+            <p>玩了</p>
+            <template slot="fou">
+                <span>我 不像</span>
+                <a href="#">你个哈皮</a>
+            </template>
+            <p slot="two">卧槽你蛇猴</p>
+            <p slot="three">卧槽法师</p>
+        </my-docc>
+    </div>
+</body>
+<script>
+    // 插槽关键字slot
+    Vue.component("my-dock", {
+        template: `<p>error<slot>烦烦烦</slot></p>`
+    })
+    Vue.component("my-docc", {
+        template: `<div>
+        <div><slot>你是个渣渣</slot></div>
+        <ul>
+        <li><slot name="one"></slot></li>
+        <li><slot name="two"></slot></li>
+        <li><slot name="three"></slot></li> 
+        <li><slot name="fou"></slot></li>   
+        </ul>
+        </div>`
+    })
+    var app = new Vue({
+        el: ".box"
+    })
+
+    //父组件更改子组件插槽
+    // 作用域插槽,有点懵逼
+</script>
+
+</html>

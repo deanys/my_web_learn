@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div>{{msg}}</div>
+        <div><button @click="del_son">销毁你们两个龟儿子</button></div>
+        <bt-one></bt-one>
+        <bt-two></bt-two>
+    </div>
+</body>
+<script>
+    // 组件要在 app之前
+    var ev = new Vue();
+    Vue.component("bt-one", {
+        data: function() {
+            return {
+                art: "小傻逼+",
+                num: 0
+            }
+        },
+        template: `<div>
+        <p>{{art+ num}}</p>
+        <button @click="add">第一个</button>
+        </div>`,
+        methods: {
+            add: function() {
+                //  触发大傻逼的事件
+                ev.$emit("two-ev", 1)
+            }
+        },
+        mounted: function() {
+            //钩子函数，没懂，需要理解
+            //val对方传过来的数据
+            ev.$on("one-ev", (val) => {
+                console.log("我是one,num是" + this.num)
+                this.num = this.num + val
+            })
+
+        }
+    });
+    Vue.component("bt-two", {
+        data: function() {
+            return {
+                art: "大傻逼+",
+                num: 1
+            }
+        },
+        template: `<div>
+        <p>{{art+num}}</p>
+        <button @click="add">第二个</button>
+        </div>`,
+        methods: {
+            add: function() {
+                ev.$emit("one-ev", 1)
+            }
+        },
+        mounted: function() {
+            //钩子函数，没懂，需要理解
+            //val对方传过来的数据
+            ev.$on("two-ev", (val) => {
+                console.log("我是two,num是" + this.num)
+                this.num = this.num + val;
+            })
+
+        }
+    });
+    var app = new Vue({
+        el: ".box",
+        data: {
+            msg: "你个哈皮，我是你们爸爸"
+        },
+        methods: {
+            del_son: function() {
+                ev.$off("one-ev");
+                ev.$off("two-ev");
+            }
+        }
+    });
+
+
+
+
+    //组件A和组件B进行通信
+    // A <---监听/触发--->事件中心<---监听/触发--->B
+    // 单独新建一个事件中心ev=new Vue()
+
+    // ev.$on("add",arg) 
+    // ev.$off("add")
+    // 触发事件 ev.$emit("ss",id)
+</script>
+
+</html>
